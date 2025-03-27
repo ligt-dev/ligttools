@@ -19,12 +19,12 @@ PROPERTIES = {'dc:bibliographicCitation', 'dc:title', 'dc:description', 'dc:cont
 
 def align_glosses(morphs, glosses, example):
     if len(morphs) != len(glosses):
-        print(morphs, glosses, example)
+        print("Unaligned glosses:", morphs, glosses, example)
     return list(zip(morphs, glosses))
 
 def split_morphs(gloss):
-    morphs = gloss[0].split('-')
-    glosses = gloss[1].split('-')
+    morphs = gloss[0].split('-') if gloss and len(gloss) > 0 and gloss[0] else []
+    glosses = gloss[1].split('-') if gloss and len(gloss) > 1 and gloss[1] else []
 
     if len(morphs) == len(glosses) and len(glosses) > 1:
         return list(zip(morphs, glosses))
@@ -203,8 +203,11 @@ class CLDFConverter(BaseConverter):
                     g.add((ex_tier_morphs, ligt.item, morph))
                     g.add((morph, RDF.type, ligt.Morph))
                     g.add((morph, DCTERMS.isPartOf, word))
-                    g.add((morph, RDFS.label, Literal(subgloss[0].strip('\\.,'), lang=lang_tag)))
-                    g.add((morph, ligt.gloss, Literal(subgloss[1].strip('\\.,'), lang=meta_lang)))
+                    g.add((morph, RDFS.label,
+                           Literal(subgloss[0].strip('\\.,') if len(subgloss) > 0 and subgloss[0] else "",
+                                   lang=lang_tag)))
+                    g.add((morph, ligt.gloss,
+                           Literal(subgloss[1].strip('\\.,') if len(subgloss) > 1 and subgloss[1] else "", lang=meta_lang)))
 
                     if next_morph:
                         g.add((morph, ligt.next, next_morph))

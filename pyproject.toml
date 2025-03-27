@@ -8,11 +8,14 @@ authors = [
     { name = "Max Ionov", email = "max.ionov@gmail.com" }
 ]
 dependencies = [
-    "rdflib>=6.0.0",
-    "requests",
-    "pycldf",
-    "cldflex",
+    "cldflex>=0.1.0",
+    "click>=8.1.8",
     "notebook>=7.3.3",
+    "pandas>=2.0.3",
+    "pycldf>=1.41.0",
+    "rdflib>=6.3.2",
+    "requests>=2.32.3",
+    "writio>=0.1.2",
 ]
 
 [project.scripts]
