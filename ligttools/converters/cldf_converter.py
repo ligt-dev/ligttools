@@ -40,6 +40,12 @@ def igt_well_formed(word):
 class CLDFConverter(BaseConverter):
     """Converter for CLDF format."""
 
+    def __init__(self):
+        with open('glottolog-codes.txt') as inp_file:
+            self.glottolog_codes = {
+                line.split("\t")[0]: line.split("\t")[1].strip() for line in inp_file
+            }
+
     def to_rdf(self, input_data: Union[str, Path], output_path: Optional[Path] = None, serialization='ttl') -> Union[str, rdflib.graph.Graph, None]:
         """
         Convert a CLDF dataset to Ligt.
@@ -99,18 +105,11 @@ class CLDFConverter(BaseConverter):
 
 
     def get_iso_code(self, glottocode):
-        lexvo = rdflib.Namespace('http://lexvo.org/ontology#')
-
-        glottolog_template = 'http://glottolog.org/resource/languoid/id/{lang_id}'
-        glottocode_uri = URIRef(glottolog_template.format(lang_id=glottocode))
-
-        return self.glottolog.value(subject=glottocode_uri, predicate=lexvo.iso639P3PCode)
+        glottolog_uri = f'http://glottolog.org/resource/languoid/id/{glottocode}'
+        return self.glottolog_codes.get(glottolog_uri)
 
 
     def make_graph(self, cldf_dataset, uri: str) -> rdflib.graph.Graph:
-        self.glottolog = rdflib.Graph()
-        self.glottolog.parse('glottolog_language.n3', format='n3')
-
         g = rdflib.Graph(identifier=uri)
         ns = rdflib.Namespace(uri)
         doc = rdflib.URIRef(uri)
