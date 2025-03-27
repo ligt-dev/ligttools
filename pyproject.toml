@@ -1,0 +1,32 @@
+[project]
+name = "ligttools"
+version = "0.1.0"
+description = "Tools for converting data between different formats and RDF specification"
+requires-python = ">=3.8"
+license = { text = "MIT" }  # Adjust according to your license
+authors = [
+    { name = "Max Ionov", email = "max.ionov@gmail.com" }
+]
+dependencies = [
+    "rdflib>=6.0.0",
+    "requests",
+    "pycldf",
+    "cldflex",
+    "notebook>=7.3.3",
+]
+
+[project.scripts]
+ligt-convert = "ligttools.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
