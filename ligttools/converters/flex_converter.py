@@ -19,5 +19,5 @@ class FlexConverter(BaseConverter):
 
         return CLDFConverter().to_rdf("examples.csv", output_path=Path(output_path) if output_path else None)
 
-    def from_rdf(self, input_data, output_path=None):
-        pass
+    def from_rdf(self, input_data, output_path=None, serialization='ttl'):
+        raise NotImplementedError("RDF -> FLEx is not supported yet.")

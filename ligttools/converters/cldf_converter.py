@@ -2,6 +2,7 @@
 CLDF to Ligt converter
 """
 
+import logging
 from pathlib import Path
 from typing import Union, Optional
 import tempfile
@@ -41,8 +42,9 @@ class CLDFConverter(BaseConverter):
     """Converter for CLDF format."""
 
     def __init__(self):
+        self.logger = logging.getLogger(__name__)
         with open('glottolog-codes.txt') as inp_file:
-            self.glottolog_codes = {
+            self._glottolog_codes = {
                 line.split("\t")[0]: line.split("\t")[1].strip() for line in inp_file
             }
 
@@ -92,24 +94,46 @@ class CLDFConverter(BaseConverter):
         except (FileNotFoundError, ValueError, UnicodeDecodeError) as e:
             raise ValueError(f"Failed to load CLDF dataset: {e}")
 
-        ligt_dataset = self.make_graph(cldf_dataset, uri=dataset_ns)
+        ligt_dataset = self._make_graph(cldf_dataset, uri=dataset_ns)
 
+        if not serialization or serialization == 'ttl':
+            serialization = 'turtle'
         if not output_path:
             return ligt_dataset if not serialization else ligt_dataset.serialize(format=serialization)
         else:
             with open(output_path, 'w') as f:
                 f.write(ligt_dataset.serialize(format=serialization))
 
-    def from_rdf(self, input_data, output_path=None):
-        pass
+    def from_rdf(self, input_data, output_path=None, serialization='ttl'):
+        """
+        Convert a Ligt RDF dataset to CLDF.
+        :param input_data: Ligt RDF dataset. Must be a local or remote file.
+        :param output_path: Optional path to write the output to. If not provided, returns the result as a string.
+        :param serialization: RDF serialization for the output. Turtle by default.
+        :return: CLDF dataset with a single ExampleTable.
+        """
+        if not serialization or serialization == 'ttl':
+            serialization = 'turtle'
 
+        self.logger.info(f"Parsing {input_data}...")
+        try:
+            g = rdflib.Graph()
+            g.parse(input_data, format=serialization)
+        # TODO: Make a specific list
+        except Exception as e:
+            raise ValueError(f"Failed to parse RDF file: {e}")
+
+        ligt = rdflib.Namespace('http://purl.org/ligt/ligt-0.3#')
+        glottolog = rdflib.Namespace('http://glottolog.org/resource/languoid/id/')
+
+        g.bind('ligt', ligt)
 
     def get_iso_code(self, glottocode):
         glottolog_uri = f'http://glottolog.org/resource/languoid/id/{glottocode}'
-        return self.glottolog_codes.get(glottolog_uri)
+        return self._glottolog_codes.get(glottolog_uri)
 
 
-    def make_graph(self, cldf_dataset, uri: str) -> rdflib.graph.Graph:
+    def _make_graph(self, cldf_dataset, uri: str) -> rdflib.graph.Graph:
         g = rdflib.Graph(identifier=uri)
         ns = rdflib.Namespace(uri)
         doc = rdflib.URIRef(uri)

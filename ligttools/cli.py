@@ -11,14 +11,21 @@ def convert_command(args):
     try:
         # Determine if we're converting to or from RDF
         if args.from_format.lower() == 'rdf':
+            
             # Converting from RDF to another format
+            print(f"Preparing conversion from Ligt to {args.to_format.upper()}...")
             converter = get_converter(args.to_format)
-            converter.from_rdf(args.input_file, args.output)
+            print(f"Starting the conversion process...")
+            serialization = args.to_format.split('.')[-1] if '.' in args.to_format else None
+            converter.from_rdf(args.input_file, args.output, serialization=serialization)
             print(f"Converted from RDF to {args.to_format.upper()}")
         else:
             # Converting from another format to RDF
+            print(f"Preparing conversion from {args.from_format.upper()} to Ligt...")
             converter = get_converter(args.from_format)
-            converter.to_rdf(args.input_file, args.output)
+            print(f"Starting the conversion process...")
+            serialization = args.from_format.split('.')[-1] if '.' in args.from_format else None
+            converter.to_rdf(args.input_file, args.output, serialization=serialization)
             print(f"Converted from {args.from_format.upper()} to RDF")
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
