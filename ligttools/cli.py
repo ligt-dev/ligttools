@@ -17,16 +17,20 @@ def convert_command(args):
             converter = get_converter(args.to_format)
             print(f"Starting the conversion process...")
             serialization = args.to_format.split('.')[-1] if '.' in args.to_format else None
-            converter.from_rdf(args.input_file, args.output, serialization=serialization)
+            output = converter.from_rdf(args.input_file, args.output, serialization=serialization)
             print(f"Converted from RDF to {args.to_format.upper()}")
+            if not args.output:
+                print(output)
         else:
             # Converting from another format to RDF
             print(f"Preparing conversion from {args.from_format.upper()} to Ligt...")
             converter = get_converter(args.from_format)
             print(f"Starting the conversion process...")
             serialization = args.from_format.split('.')[-1] if '.' in args.from_format else None
-            converter.to_rdf(args.input_file, args.output, serialization=serialization)
+            output = converter.to_rdf(args.input_file, args.output, serialization=serialization)
             print(f"Converted from {args.from_format.upper()} to RDF")
+            if not args.output:
+                print(output)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1

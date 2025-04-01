@@ -6,6 +6,7 @@ import logging
 from pathlib import Path
 from typing import Union, Optional
 import tempfile
+from importlib import resources
 
 import requests
 import pycldf
@@ -43,7 +44,7 @@ class CLDFConverter(BaseConverter):
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        with open('glottolog-codes.txt') as inp_file:
+        with resources.open_text("ligttools.converters", "glottolog-codes.txt") as inp_file:
             self._glottolog_codes = {
                 line.split("\t")[0]: line.split("\t")[1].strip() for line in inp_file
             }
