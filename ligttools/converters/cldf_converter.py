@@ -156,19 +156,23 @@ class CLDFConverter(BaseConverter):
             if prop in cldf_dataset.properties:
                 g.set((ns.examples, RDFS.comment, Literal(cldf_dataset.properties[prop], lang="en")))
 
+        lang_codes = {}
+        for lang in cldf_dataset["LanguageTable"]:
+            lang_codes[lang["ID"]] = lang["Glottocode"] or lang["ISO639P3code"]
+
         examples = [{'id': example['ID'],
                      'baseline': example.get('Primary_Text'),
                      'glosses': align_glosses(example.get('Analyzed_Word'), example.get('Gloss'), example),
                      'translation': example.get('Translated_Text'),
-                     'language': example.get("Language_ID", "unk"), #languages.get(example.get('Language_ID'), {"Glottocode": example.get('Language_ID')}),
+                     'language': lang_codes.get(example.get("Language_ID", "und")),
                      'meta_language': example.get('Meta_Language_ID'),
                      'comment': example.get('Comment')
                      } for example in cldf_dataset['ExampleTable'] if
                     igt_well_formed(example.get("Analyzed_Word"))]
 
         for example in examples:
-            lang_tag = self.get_iso_code(example['language']) or "unk"
-            lang_uri = glottolog + URIRef(example['language'])
+            lang_tag = self.get_iso_code(example['language']) or f"und-x-{example["language"]}" if example["language"] else "und"
+            lang_uri = glottolog + URIRef(example['language']) if example["language"] else URIRef("und")
 
             meta_lang = self.get_iso_code(example["meta_language"]) or "en"
 
