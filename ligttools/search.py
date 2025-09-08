@@ -2,8 +2,8 @@ import argparse
 import sys
 import re
 
-from ligttools.search import QueryArg, Dataset
-from ligttools.search.sparql import get_results, create_graph
+from ligttools.query import QueryArg, Dataset
+from ligttools.query.sparql import get_results, create_graph
 
 
 def parse_query(query: str):
@@ -51,7 +51,7 @@ Examples:
         help="Local RDF files or remote RDF files or SPARQL endpoints"
     )
 
-    parser.add_argument('--version', action='version', version='%(prog)s 0.3.0',
+    parser.add_argument('--version', action='version', version='%(prog)s 0.3.1',
                         help='Show version information and exit')
 
     return parser

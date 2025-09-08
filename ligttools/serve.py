@@ -14,7 +14,7 @@ def create_parser() -> argparse.ArgumentParser:
                         help='Port to run the server on (default: 8080)')
     parser.add_argument('-H', '--host', default='0.0.0.0',
                         help='Host to run the server on (default: 0.0.0.0)')
-    parser.add_argument('--version', action='version', version='%(prog)s 0.3.0',
+    parser.add_argument('--version', action='version', version='%(prog)s 0.3.1',
                         help='Show version information and exit')
     return parser
 

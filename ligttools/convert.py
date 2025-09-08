@@ -82,7 +82,7 @@ Examples:
     parser.add_argument('--list-formats', action='store_true',
                         help='List all supported formats and exit')
 
-    parser.add_argument('--version', action='version', version='%(prog)s 0.3.0',
+    parser.add_argument('--version', action='version', version='%(prog)s 0.3.1',
                         help='Show version information and exit')
 
     return parser

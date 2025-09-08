@@ -169,14 +169,15 @@ formats = get_supported_formats()
 ### Search
 
 Importing the necessary functions and initialising a graph:
+
 ```python
-from ligttools.search import Dataset
-from ligttools.search.sparql import create_graph
+from ligttools.query import Dataset
+from ligttools.query.sparql import create_graph
 
 datasets = [
     Dataset("test-data.ttl", is_sparql=False),
     Dataset("http://sparql-endpoin-url/sparql", is_sparql=True),
-    
+
     # A dataset can be also initialised from a string
     Dataset.from_string("https://remote.url/dataset.ttl")
 ]
@@ -185,15 +186,16 @@ g = create_graph(datasets)
 ```
 
 Now we can define the arguments and run the query:
+
 ```python
-from ligttools.search import QueryArg
-from ligttools.search.sparql import get_results
+from ligttools.query import QueryArg
+from ligttools.query.sparql import get_results
 
 args = [
     QueryArg("s", "PL", is_uri=False),
     QueryArg(None, "NOM"),
     QueryArg(None, "<https://purl.org/olia/unimorph/unimorph.owl#PST>", is_uri=True),
-    
+
     # An argument can also be parsed from a string
     QueryArg.from_token(":PST")
 ]

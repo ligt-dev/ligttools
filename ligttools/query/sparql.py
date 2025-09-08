@@ -1,7 +1,7 @@
 from rdflib import Graph
 from oxrdflib import OxigraphStore
 
-from ligttools.search import QueryArg, Dataset
+from ligttools.query import QueryArg, Dataset
 
 
 def prepare_query(query_args: list[QueryArg], endpoint: str = None):
