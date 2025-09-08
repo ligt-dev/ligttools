@@ -1,0 +1,4 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+<https://purl.org/olia/unimorph/unimorph.owl#PST> skos:notation "PST" .
+<https://purl.org/olia/unimorph/unimorph.owl#PL> skos:notation "PL" .
+

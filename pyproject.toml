@@ -1,7 +1,7 @@
 [project]
 name = "ligttools"
-version = "0.2.4"
-description = "Tools for converting data between different formats and RDF specification"
+version = "0.3.0"
+description = "Tools for converting and searching data between different formats and RDF specification"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
@@ -19,13 +19,14 @@ authors = [
 ]
 dependencies = [
     "cldflex>=0.1.0",
-    "click>=8.1.8",
     "pandas>=2.2",
     "numpy>=1.25",
     "pycldf>=1.41.0",
     "rdflib>=6.3.2",
     "requests>=2.32.3",
     "writio>=0.1.2",
+    "oxrdflib>=0.4.0",
+    "flask>=3.1.2",
 ]
 
 [project.urls]
@@ -33,7 +34,10 @@ Homepage = "https://github.com/ligt-dev/ligttools"
 Issues = "https://github.com/ligt-dev/ligttools/issues"
 
 [project.scripts]
-ligt-convert = "ligttools.cli:main"
+ligt-convert = "ligttools.convert:main"
+ligt-search = "ligttools.search:main"
+ligt-serve = "ligttools.serve:main"
+enligten = "ligttools.serve:main"
 
 [project.optional-dependencies]
 dev = [

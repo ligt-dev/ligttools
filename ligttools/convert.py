@@ -55,13 +55,13 @@ def create_parser() -> argparse.ArgumentParser:
         epilog="""
 Examples:
   # Convert examples from a CLDF dataset to Ligt
-  ligttools -f cldf -t rdf examples.cldf -o output.ttl
+  ligt-convert -f cldf -t rdf examples.cldf -o output.ttl
 
   # Convert from Ligt to CLDF
-  ligttools -f rdf -t json input.rdf -o output.json
+  ligt-convert -f rdf -t json input.rdf -o output.json
 
   # List supported formats
-  ligttools --list-formats
+  ligt-convert --list-formats
 """)
 
     # Add arguments for input/output files
@@ -82,7 +82,7 @@ Examples:
     parser.add_argument('--list-formats', action='store_true',
                         help='List all supported formats and exit')
 
-    parser.add_argument('--version', action='version', version='%(prog)s 0.1.0',
+    parser.add_argument('--version', action='version', version='%(prog)s 0.3.0',
                         help='Show version information and exit')
 
     return parser

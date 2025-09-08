@@ -5,9 +5,8 @@ import os
 import tempfile
 import pytest
 
-from ligttools.converters import get_converter, register_converter, get_supported_formats
+from ligttools.converters import get_converter, register_converter, get_supported_formats, CLDFConverter
 from ligttools.converters.base import BaseConverter
-from ligttools.converters.json_converter import JsonConverter
 
 
 class TestConverters:
@@ -16,12 +15,12 @@ class TestConverters:
     def test_get_converter(self):
         """Test getting converters."""
         # Get a valid converter
-        json_converter = get_converter('json')
-        assert isinstance(json_converter, JsonConverter)
+        json_converter = get_converter('cldf')
+        assert isinstance(json_converter, CLDFConverter)
 
         # Test case insensitivity
-        json_converter = get_converter('JSON')
-        assert isinstance(json_converter, JsonConverter)
+        json_converter = get_converter('CLDF')
+        assert isinstance(json_converter, CLDFConverter)
 
         # Test invalid converter
         with pytest.raises(ValueError):
@@ -32,10 +31,10 @@ class TestConverters:
 
         # Create a mock converter
         class MockConverter(BaseConverter):
-            def to_rdf(self, input_data, output_path=None):
+            def to_rdf(self, input_data, output_path=None, serialization='ttl'):
                 return "mock_rdf"
 
-            def from_rdf(self, input_data, output_path=None):
+            def from_rdf(self, input_data, output_path=None, serialization='ttl'):
                 return {"mock": "data"}
 
         # Register the converter
@@ -67,7 +66,7 @@ class TestConverters:
             assert 'test' in rdf_output
             assert 'data' in rdf_output
 
-            # Test with output file
+            # Test with an output file
             with tempfile.NamedTemporaryFile(delete=False, suffix='.rdf') as out_file:
                 out_path = out_file.name
 
@@ -103,7 +102,7 @@ class TestConverters:
             assert isinstance(json_output, dict)
             assert 'example' in json_output
 
-            # Test with output file
+            # Test with an output file
             with tempfile.NamedTemporaryFile(delete=False, suffix='.json') as out_file:
                 out_path = out_file.name
 

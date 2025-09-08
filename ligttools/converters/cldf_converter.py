@@ -37,7 +37,7 @@ def igt_well_formed(word):
     # For now, we check for the malformed examples where word separation is within a token
     # Additional replaces are a hack to correctly handle glossing like ["morph- morph"]
     # which is sometimes used in books
-    return word and not any(' ' in morph.replace('- ', '-').replace('- ', '-') for morph in word)
+    return word and not any(' ' in morph.replace('- ', '-').replace('- ', '-') for morph in word if morph)
 
 class CLDFConverter(BaseConverter):
     """Converter for CLDF format."""
@@ -178,7 +178,7 @@ class CLDFConverter(BaseConverter):
 
             # Utterance node
             ex = ns + URIRef(f"ex_{example['id']}")
-            g.add((ns.examples, ligt.subSegment, ex))
+            g.add((ns.examples, ligt.utterance, ex))
 
             # Utterance properties
             g.add((ex, RDF.type, ligt.Utterance))
@@ -216,7 +216,7 @@ class CLDFConverter(BaseConverter):
                 g.add((ex_tier_words, ligt.item, word))
                 g.add((word, RDF.type, ligt.Word))
                 g.add((word, DCTERMS.isPartOf, phrase))
-                g.add((word, RDFS.label, Literal(gloss[0].strip('\\.,'), lang=lang_tag)))
+                g.add((word, RDFS.label, Literal(gloss[0].strip('\\.,') if len(gloss) and gloss[0] else Literal(""), lang=lang_tag)))
 
                 if next_word:
                     g.add((word, ligt.next, next_word))

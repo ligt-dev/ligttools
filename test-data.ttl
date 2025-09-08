@@ -1,0 +1,1695 @@
+@prefix data: <https://raw.githubusercontent.com/cldf-datasets/lgr/refs/tags/v1.0/cldf/Generic-metadata.json#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix glottolog: <http://glottolog.org/resource/languoid/id/> .
+@prefix ligt: <http://purl.org/ligt/ligt-0.3#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data: a ligt:Document ;
+    ligt:hasUtterances data:examples .
+
+data:ex_1 a ligt:Utterance ;
+    rdfs:label "Mereka di Jakarta sekarang."@ind ;
+    dcterms:language glottolog:indo1316 ;
+    ligt:hasMorphs data:ex_1_tier_morphs ;
+    ligt:hasTier data:ex_1_tier_phrase ;
+    ligt:hasWords data:ex_1_tier_words ;
+    ligt:translation "They are in Jakarta now."@eng .
+
+data:ex_10 a ligt:Utterance ;
+    rdfs:label "nan apedani mehuni essandu."@hit ;
+    dcterms:language glottolog:hitt1242 ;
+    ligt:hasMorphs data:ex_10_tier_morphs ;
+    ligt:hasTier data:ex_10_tier_phrase ;
+    ligt:hasWords data:ex_10_tier_words ;
+    ligt:translation "They shall celebrate him on that date."@eng ;
+    rdfs:comment "CONN = connective"@eng .
+
+data:ex_10_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "n=an"@hit ;
+    dcterms:isPartOf data:ex_10_item_word_1 ;
+    ligt:gloss "CONN=him"@eng .
+
+data:ex_10_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "apedani"@hit ;
+    dcterms:isPartOf data:ex_10_item_word_2 ;
+    ligt:gloss "that.DAT.SG"@eng .
+
+data:ex_10_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "mehuni"@hit ;
+    dcterms:isPartOf data:ex_10_item_word_3 ;
+    ligt:gloss "time.DAT.SG"@eng .
+
+data:ex_10_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "essandu"@hit ;
+    dcterms:isPartOf data:ex_10_item_word_4 ;
+    ligt:gloss "eat.they.shall"@eng .
+
+data:ex_10_tier_morphs ligt:item data:ex_10_item_morph_1_1,
+        data:ex_10_item_morph_2_1,
+        data:ex_10_item_morph_3_1,
+        data:ex_10_item_morph_4_1 .
+
+data:ex_10_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_10_item_phrase_1 .
+
+data:ex_10_tier_words ligt:item data:ex_10_item_word_1,
+        data:ex_10_item_word_2,
+        data:ex_10_item_word_3,
+        data:ex_10_item_word_4 .
+
+data:ex_11 a ligt:Utterance ;
+    rdfs:label "nanggayan gunybiyarluga?"@djd ;
+    dcterms:language glottolog:djam1255 ;
+    ligt:hasMorphs data:ex_11_tier_morphs ;
+    ligt:hasTier data:ex_11_tier_phrase ;
+    ligt:hasWords data:ex_11_tier_words ;
+    ligt:translation "Who do you two want to spear?"@eng .
+
+data:ex_11_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "nanggayan"@djd ;
+    dcterms:isPartOf data:ex_11_item_word_1 ;
+    ligt:gloss "who"@eng .
+
+data:ex_11_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "guny"@djd ;
+    dcterms:isPartOf data:ex_11_item_word_2 ;
+    ligt:gloss "2DU.A.3SG.P"@eng ;
+    ligt:next data:ex_11_item_morph_2_2 .
+
+data:ex_11_tier_morphs ligt:item data:ex_11_item_morph_1_1,
+        data:ex_11_item_morph_2_1,
+        data:ex_11_item_morph_2_2,
+        data:ex_11_item_morph_2_3 .
+
+data:ex_11_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_11_item_phrase_1 .
+
+data:ex_11_tier_words ligt:item data:ex_11_item_word_1,
+        data:ex_11_item_word_2 .
+
+data:ex_12 a ligt:Utterance ;
+    rdfs:label "çıkmak"@tur ;
+    dcterms:language glottolog:nucl1301 ;
+    ligt:hasMorphs data:ex_12_tier_morphs ;
+    ligt:hasTier data:ex_12_tier_phrase ;
+    ligt:hasWords data:ex_12_tier_words ;
+    ligt:translation "to come out"@eng ;
+    rdfs:comment "cf. 6"@eng .
+
+data:ex_12_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "çık"@tur ;
+    dcterms:isPartOf data:ex_12_item_word_1 ;
+    ligt:gloss "come_out"@eng ;
+    ligt:next data:ex_12_item_morph_1_2 .
+
+data:ex_12_tier_morphs ligt:item data:ex_12_item_morph_1_1,
+        data:ex_12_item_morph_1_2 .
+
+data:ex_12_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_12_item_phrase_1 .
+
+data:ex_12_tier_words ligt:item data:ex_12_item_word_1 .
+
+data:ex_13 a ligt:Utterance ;
+    rdfs:label "insularum"@lat ;
+    dcterms:language glottolog:lati1261 ;
+    ligt:hasMorphs data:ex_13_tier_morphs ;
+    ligt:hasTier data:ex_13_tier_phrase ;
+    ligt:hasWords data:ex_13_tier_words ;
+    ligt:translation "of the islands"@eng ;
+    rdfs:comment "cf. 7"@eng .
+
+data:ex_13_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "insul"@lat ;
+    dcterms:isPartOf data:ex_13_item_word_1 ;
+    ligt:gloss "island"@eng ;
+    ligt:next data:ex_13_item_morph_1_2 .
+
+data:ex_13_tier_morphs ligt:item data:ex_13_item_morph_1_1,
+        data:ex_13_item_morph_1_2 .
+
+data:ex_13_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_13_item_phrase_1 .
+
+data:ex_13_tier_words ligt:item data:ex_13_item_word_1 .
+
+data:ex_14 a ligt:Utterance ;
+    rdfs:label "aux chevaux"@fra ;
+    dcterms:language glottolog:stan1290 ;
+    ligt:hasMorphs data:ex_14_tier_morphs ;
+    ligt:hasTier data:ex_14_tier_phrase ;
+    ligt:hasWords data:ex_14_tier_words ;
+    ligt:translation "to the horses"@eng .
+
+data:ex_14_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "aux"@fra ;
+    dcterms:isPartOf data:ex_14_item_word_1 ;
+    ligt:gloss "to;ART;PL"@eng .
+
+data:ex_14_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "chevaux"@fra ;
+    dcterms:isPartOf data:ex_14_item_word_2 ;
+    ligt:gloss "horse;PL"@eng .
+
+data:ex_14_tier_morphs ligt:item data:ex_14_item_morph_1_1,
+        data:ex_14_item_morph_2_1 .
+
+data:ex_14_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_14_item_phrase_1 .
+
+data:ex_14_tier_words ligt:item data:ex_14_item_word_1,
+        data:ex_14_item_word_2 .
+
+data:ex_15 a ligt:Utterance ;
+    rdfs:label "nan apedani mehuni essandu."@hit ;
+    dcterms:language glottolog:hitt1242 ;
+    ligt:hasMorphs data:ex_15_tier_morphs ;
+    ligt:hasTier data:ex_15_tier_phrase ;
+    ligt:hasWords data:ex_15_tier_words ;
+    ligt:translation "They shall celebrate him on that date."@eng ;
+    rdfs:comment "cf. 10"@eng .
+
+data:ex_15_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "n=an"@hit ;
+    dcterms:isPartOf data:ex_15_item_word_1 ;
+    ligt:gloss "CONN=him"@eng .
+
+data:ex_15_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "apedani"@hit ;
+    dcterms:isPartOf data:ex_15_item_word_2 ;
+    ligt:gloss "that:DAT;SG"@eng .
+
+data:ex_15_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "mehuni"@hit ;
+    dcterms:isPartOf data:ex_15_item_word_3 ;
+    ligt:gloss "time:DAT;SG"@eng .
+
+data:ex_15_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "essandu"@hit ;
+    dcterms:isPartOf data:ex_15_item_word_4 ;
+    ligt:gloss "eat:they:shall"@eng .
+
+data:ex_15_tier_morphs ligt:item data:ex_15_item_morph_1_1,
+        data:ex_15_item_morph_2_1,
+        data:ex_15_item_morph_3_1,
+        data:ex_15_item_morph_4_1 .
+
+data:ex_15_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_15_item_phrase_1 .
+
+data:ex_15_tier_words ligt:item data:ex_15_item_word_1,
+        data:ex_15_item_word_2,
+        data:ex_15_item_word_3,
+        data:ex_15_item_word_4 .
+
+data:ex_16 a ligt:Utterance ;
+    rdfs:label "unsern Vätern"@deu ;
+    dcterms:language glottolog:stan1295 ;
+    ligt:hasMorphs data:ex_16_tier_morphs ;
+    ligt:hasTier data:ex_16_tier_phrase ;
+    ligt:hasWords data:ex_16_tier_words ;
+    ligt:translation "to our fathers"@eng ;
+    rdfs:comment "cf. singular Vater; cf. 9"@eng .
+
+data:ex_16_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "unser"@deu ;
+    dcterms:isPartOf data:ex_16_item_word_1 ;
+    ligt:gloss "our"@eng ;
+    ligt:next data:ex_16_item_morph_1_2 .
+
+data:ex_16_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "Väter"@deu ;
+    dcterms:isPartOf data:ex_16_item_word_2 ;
+    ligt:gloss "father\\PL"@eng ;
+    ligt:next data:ex_16_item_morph_2_2 .
+
+data:ex_16_tier_morphs ligt:item data:ex_16_item_morph_1_1,
+        data:ex_16_item_morph_1_2,
+        data:ex_16_item_morph_2_1,
+        data:ex_16_item_morph_2_2 .
+
+data:ex_16_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_16_item_phrase_1 .
+
+data:ex_16_tier_words ligt:item data:ex_16_item_word_1,
+        data:ex_16_item_word_2 .
+
+data:ex_17 a ligt:Utterance ;
+    rdfs:label "bhrisis"@gle ;
+    dcterms:language glottolog:iris1253 ;
+    ligt:hasMorphs data:ex_17_tier_morphs ;
+    ligt:hasTier data:ex_17_tier_phrase ;
+    ligt:hasWords data:ex_17_tier_words ;
+    ligt:translation "you broke"@eng ;
+    rdfs:comment "cf. nonpast bris-"@eng .
+
+data:ex_17_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "bhris"@gle ;
+    dcterms:isPartOf data:ex_17_item_word_1 ;
+    ligt:gloss "PST\\break"@eng ;
+    ligt:next data:ex_17_item_morph_1_2 .
+
+data:ex_17_tier_morphs ligt:item data:ex_17_item_morph_1_1,
+        data:ex_17_item_morph_1_2 .
+
+data:ex_17_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_17_item_phrase_1 .
+
+data:ex_17_tier_words ligt:item data:ex_17_item_word_1 .
+
+data:ex_18 a ligt:Utterance ;
+    rdfs:label "múkòrà"@kin ;
+    dcterms:language glottolog:kiny1244 ;
+    ligt:hasMorphs data:ex_18_tier_morphs ;
+    ligt:hasTier data:ex_18_tier_phrase ;
+    ligt:hasWords data:ex_18_tier_words ;
+    ligt:translation "that we work"@eng ;
+    rdfs:comment "cf. indicative mù-kòrà"@eng .
+
+data:ex_18_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "mú"@kin ;
+    dcterms:isPartOf data:ex_18_item_word_1 ;
+    ligt:gloss "SBJV\\1PL"@eng ;
+    ligt:next data:ex_18_item_morph_1_2 .
+
+data:ex_18_tier_morphs ligt:item data:ex_18_item_morph_1_1,
+        data:ex_18_item_morph_1_2 .
+
+data:ex_18_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_18_item_phrase_1 .
+
+data:ex_18_tier_words ligt:item data:ex_18_item_word_1 .
+
+data:ex_19 a ligt:Utterance ;
+    rdfs:label "nanggayan gunybiyarluga?"@djd ;
+    dcterms:language glottolog:djam1255 ;
+    ligt:hasMorphs data:ex_19_tier_morphs ;
+    ligt:hasTier data:ex_19_tier_phrase ;
+    ligt:hasWords data:ex_19_tier_words ;
+    ligt:translation "Who do you two want to spear?"@eng ;
+    rdfs:comment "cf. 11"@eng .
+
+data:ex_19_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "nanggayan"@djd ;
+    dcterms:isPartOf data:ex_19_item_word_1 ;
+    ligt:gloss "who"@eng .
+
+data:ex_19_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "guny"@djd ;
+    dcterms:isPartOf data:ex_19_item_word_2 ;
+    ligt:gloss "2DU>3SG"@eng ;
+    ligt:next data:ex_19_item_morph_2_2 .
+
+data:ex_19_tier_morphs ligt:item data:ex_19_item_morph_1_1,
+        data:ex_19_item_morph_2_1,
+        data:ex_19_item_morph_2_2,
+        data:ex_19_item_morph_2_3 .
+
+data:ex_19_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_19_item_phrase_1 .
+
+data:ex_19_tier_words ligt:item data:ex_19_item_word_1,
+        data:ex_19_item_word_2 .
+
+data:ex_1_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "Mereka"@ind ;
+    dcterms:isPartOf data:ex_1_item_word_1 ;
+    ligt:gloss "They"@eng .
+
+data:ex_1_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "di"@ind ;
+    dcterms:isPartOf data:ex_1_item_word_2 ;
+    ligt:gloss "in"@eng .
+
+data:ex_1_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "Jakarta"@ind ;
+    dcterms:isPartOf data:ex_1_item_word_3 ;
+    ligt:gloss "Jakarta"@eng .
+
+data:ex_1_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "sekarang"@ind ;
+    dcterms:isPartOf data:ex_1_item_word_4 ;
+    ligt:gloss "now"@eng .
+
+data:ex_1_tier_morphs ligt:item data:ex_1_item_morph_1_1,
+        data:ex_1_item_morph_2_1,
+        data:ex_1_item_morph_3_1,
+        data:ex_1_item_morph_4_1 .
+
+data:ex_1_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_1_item_phrase_1 .
+
+data:ex_1_tier_words ligt:item data:ex_1_item_word_1,
+        data:ex_1_item_word_2,
+        data:ex_1_item_word_3,
+        data:ex_1_item_word_4 .
+
+data:ex_2 a ligt:Utterance ;
+    rdfs:label "Gila aburun ferma hamišaluǧ güǧüna amuq’dač."@lez ;
+    dcterms:language glottolog:lezg1247 ;
+    ligt:hasMorphs data:ex_2_tier_morphs ;
+    ligt:hasTier data:ex_2_tier_phrase ;
+    ligt:hasWords data:ex_2_tier_words ;
+    ligt:translation "Now their farm will not stay behind forever."@eng .
+
+data:ex_20 a ligt:Utterance ;
+    rdfs:label "andiamo"@ita ;
+    dcterms:language glottolog:ital1282 ;
+    ligt:hasMorphs data:ex_20_tier_morphs ;
+    ligt:hasTier data:ex_20_tier_phrase ;
+    ligt:hasWords data:ex_20_tier_words ;
+    ligt:translation "we go"@eng ;
+    rdfs:comment "not: go-PRS.1.PL"@eng .
+
+data:ex_20_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "and"@ita ;
+    dcterms:isPartOf data:ex_20_item_word_1 ;
+    ligt:gloss "go"@eng ;
+    ligt:next data:ex_20_item_morph_1_2 .
+
+data:ex_20_tier_morphs ligt:item data:ex_20_item_morph_1_1,
+        data:ex_20_item_morph_1_2 .
+
+data:ex_20_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_20_item_phrase_1 .
+
+data:ex_20_tier_words ligt:item data:ex_20_item_word_1 .
+
+data:ex_21a a ligt:Utterance ;
+    rdfs:label "nee akhimchi nyuNNa"@byw ;
+    dcterms:language glottolog:belh1239 ;
+    ligt:hasMorphs data:ex_21a_tier_morphs ;
+    ligt:hasTier data:ex_21a_tier_phrase ;
+    ligt:hasWords data:ex_21a_tier_words ;
+    ligt:translation "Here are my houses."@eng .
+
+data:ex_21a_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "ne"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_1 ;
+    ligt:gloss "DEM"@eng ;
+    ligt:next data:ex_21a_item_morph_1_2 .
+
+data:ex_21a_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "a"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_2 ;
+    ligt:gloss "1SG.POSS"@eng ;
+    ligt:next data:ex_21a_item_morph_2_2 .
+
+data:ex_21a_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "n"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_3 ;
+    ligt:gloss "3NSG"@eng ;
+    ligt:next data:ex_21a_item_morph_3_2 .
+
+data:ex_21a_tier_morphs ligt:item data:ex_21a_item_morph_1_1,
+        data:ex_21a_item_morph_1_2,
+        data:ex_21a_item_morph_2_1,
+        data:ex_21a_item_morph_2_2,
+        data:ex_21a_item_morph_2_3,
+        data:ex_21a_item_morph_3_1,
+        data:ex_21a_item_morph_3_2 .
+
+data:ex_21a_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_21a_item_phrase_1 .
+
+data:ex_21a_tier_words ligt:item data:ex_21a_item_word_1,
+        data:ex_21a_item_word_2,
+        data:ex_21a_item_word_3 .
+
+data:ex_21b a ligt:Utterance ;
+    rdfs:label "nee akhimchi nyuNNa"@byw ;
+    dcterms:language glottolog:belh1239 ;
+    ligt:hasMorphs data:ex_21b_tier_morphs ;
+    ligt:hasTier data:ex_21b_tier_phrase ;
+    ligt:hasWords data:ex_21b_tier_words ;
+    ligt:translation "Here are my houses."@eng .
+
+data:ex_21b_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "ne"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_1 ;
+    ligt:gloss "DEM"@eng ;
+    ligt:next data:ex_21b_item_morph_1_2 .
+
+data:ex_21b_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "a"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_2 ;
+    ligt:gloss "1sPOSS"@eng ;
+    ligt:next data:ex_21b_item_morph_2_2 .
+
+data:ex_21b_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "n"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_3 ;
+    ligt:gloss "3ns"@eng ;
+    ligt:next data:ex_21b_item_morph_3_2 .
+
+data:ex_21b_tier_morphs ligt:item data:ex_21b_item_morph_1_1,
+        data:ex_21b_item_morph_1_2,
+        data:ex_21b_item_morph_2_1,
+        data:ex_21b_item_morph_2_2,
+        data:ex_21b_item_morph_2_3,
+        data:ex_21b_item_morph_3_1,
+        data:ex_21b_item_morph_3_2 .
+
+data:ex_21b_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_21b_item_phrase_1 .
+
+data:ex_21b_tier_words ligt:item data:ex_21b_item_word_1,
+        data:ex_21b_item_word_2,
+        data:ex_21b_item_word_3 .
+
+data:ex_22a a ligt:Utterance ;
+    rdfs:label "puer"@lat ;
+    dcterms:language glottolog:lati1261 ;
+    ligt:hasMorphs data:ex_22a_tier_morphs ;
+    ligt:hasTier data:ex_22a_tier_phrase ;
+    ligt:hasWords data:ex_22a_tier_words ;
+    ligt:translation "boy"@eng .
+
+data:ex_22a_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "puer"@lat ;
+    dcterms:isPartOf data:ex_22a_item_word_1 ;
+    ligt:gloss "boy[NOM.SG]"@eng .
+
+data:ex_22a_tier_morphs ligt:item data:ex_22a_item_morph_1_1 .
+
+data:ex_22a_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_22a_item_phrase_1 .
+
+data:ex_22a_tier_words ligt:item data:ex_22a_item_word_1 .
+
+data:ex_22b a ligt:Utterance ;
+    rdfs:label "puer"@lat ;
+    dcterms:language glottolog:lati1261 ;
+    ligt:hasMorphs data:ex_22b_tier_morphs ;
+    ligt:hasTier data:ex_22b_tier_phrase ;
+    ligt:hasWords data:ex_22b_tier_words ;
+    ligt:translation "boy"@eng .
+
+data:ex_22b_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "puer"@lat ;
+    dcterms:isPartOf data:ex_22b_item_word_1 ;
+    ligt:gloss "boy"@eng ;
+    ligt:next data:ex_22b_item_morph_1_2 .
+
+data:ex_22b_tier_morphs ligt:item data:ex_22b_item_morph_1_1,
+        data:ex_22b_item_morph_1_2 .
+
+data:ex_22b_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_22b_item_phrase_1 .
+
+data:ex_22b_tier_words ligt:item data:ex_22b_item_word_1 .
+
+data:ex_23 a ligt:Utterance ;
+    rdfs:label "oždig xõxe muq'er"@huz ;
+    dcterms:language glottolog:hunz1247 ;
+    ligt:hasMorphs data:ex_23_tier_morphs ;
+    ligt:hasTier data:ex_23_tier_phrase ;
+    ligt:hasWords data:ex_23_tier_words ;
+    ligt:translation "Because of the boy the tree bent."@eng ;
+    rdfs:comment "G4 = 4th gender, AD = adessive, PRET = preterite"@eng .
+
+data:ex_23_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "ož"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_1 ;
+    ligt:gloss "boy"@eng ;
+    ligt:next data:ex_23_item_morph_1_2 .
+
+data:ex_23_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "xõxe"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_2 ;
+    ligt:gloss "tree(G4)"@eng .
+
+data:ex_23_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "m"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_3 ;
+    ligt:gloss "G4"@eng ;
+    ligt:next data:ex_23_item_morph_3_2 .
+
+data:ex_23_tier_morphs ligt:item data:ex_23_item_morph_1_1,
+        data:ex_23_item_morph_1_2,
+        data:ex_23_item_morph_1_3,
+        data:ex_23_item_morph_2_1,
+        data:ex_23_item_morph_3_1,
+        data:ex_23_item_morph_3_2,
+        data:ex_23_item_morph_3_3 .
+
+data:ex_23_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_23_item_phrase_1 .
+
+data:ex_23_tier_words ligt:item data:ex_23_item_word_1,
+        data:ex_23_item_word_2,
+        data:ex_23_item_word_3 .
+
+data:ex_24 a ligt:Utterance ;
+    rdfs:label "nawíčhawaxʔu̧"@lkt ;
+    dcterms:language glottolog:lako1247 ;
+    ligt:hasMorphs data:ex_24_tier_morphs ;
+    ligt:hasTier data:ex_24_tier_phrase ;
+    ligt:hasWords data:ex_24_tier_words ;
+    ligt:translation "I hear them"@eng ;
+    rdfs:comment "UND = undergoer, ACT = actor"@eng .
+
+data:ex_24_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "na"@lkt ;
+    dcterms:isPartOf data:ex_24_item_word_1 ;
+    ligt:gloss "hear"@eng ;
+    ligt:next data:ex_24_item_morph_1_2 .
+
+data:ex_24_tier_morphs ligt:item data:ex_24_item_morph_1_1,
+        data:ex_24_item_morph_1_2,
+        data:ex_24_item_morph_1_3,
+        data:ex_24_item_morph_1_4 .
+
+data:ex_24_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_24_item_phrase_1 .
+
+data:ex_24_tier_words ligt:item data:ex_24_item_word_1 .
+
+data:ex_25 a ligt:Utterance ;
+    rdfs:label "nawíčhawaxʔu̧"@lkt ;
+    dcterms:language glottolog:lako1247 ;
+    ligt:hasMorphs data:ex_25_tier_morphs ;
+    ligt:hasTier data:ex_25_tier_phrase ;
+    ligt:hasWords data:ex_25_tier_words ;
+    ligt:translation "I hear them"@eng .
+
+data:ex_25_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "na"@lkt ;
+    dcterms:isPartOf data:ex_25_item_word_1 ;
+    ligt:gloss "hear"@eng ;
+    ligt:next data:ex_25_item_morph_1_2 .
+
+data:ex_25_tier_morphs ligt:item data:ex_25_item_morph_1_1,
+        data:ex_25_item_morph_1_2,
+        data:ex_25_item_morph_1_3,
+        data:ex_25_item_morph_1_4 .
+
+data:ex_25_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_25_item_phrase_1 .
+
+data:ex_25_tier_words ligt:item data:ex_25_item_word_1 .
+
+data:ex_26a a ligt:Utterance ;
+    rdfs:label "gesehen"@deu ;
+    dcterms:language glottolog:stan1295 ;
+    ligt:hasMorphs data:ex_26a_tier_morphs ;
+    ligt:hasTier data:ex_26a_tier_phrase ;
+    ligt:hasWords data:ex_26a_tier_words ;
+    ligt:translation "seen"@eng .
+
+data:ex_26a_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "ge"@deu ;
+    dcterms:isPartOf data:ex_26a_item_word_1 ;
+    ligt:gloss "PTCP"@eng ;
+    ligt:next data:ex_26a_item_morph_1_2 .
+
+data:ex_26a_tier_morphs ligt:item data:ex_26a_item_morph_1_1,
+        data:ex_26a_item_morph_1_2,
+        data:ex_26a_item_morph_1_3 .
+
+data:ex_26a_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_26a_item_phrase_1 .
+
+data:ex_26a_tier_words ligt:item data:ex_26a_item_word_1 .
+
+data:ex_26b a ligt:Utterance ;
+    rdfs:label "gesehen"@deu ;
+    dcterms:language glottolog:stan1295 ;
+    ligt:hasMorphs data:ex_26b_tier_morphs ;
+    ligt:hasTier data:ex_26b_tier_phrase ;
+    ligt:hasWords data:ex_26b_tier_words ;
+    ligt:translation "seen"@eng .
+
+data:ex_26b_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "ge"@deu ;
+    dcterms:isPartOf data:ex_26b_item_word_1 ;
+    ligt:gloss "PTCP"@eng ;
+    ligt:next data:ex_26b_item_morph_1_2 .
+
+data:ex_26b_tier_morphs ligt:item data:ex_26b_item_morph_1_1,
+        data:ex_26b_item_morph_1_2,
+        data:ex_26b_item_morph_1_3 .
+
+data:ex_26b_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_26b_item_phrase_1 .
+
+data:ex_26b_tier_words ligt:item data:ex_26b_item_word_1 .
+
+data:ex_27 a ligt:Utterance ;
+    rdfs:label "bumili"@tgl ;
+    dcterms:language glottolog:taga1270 ;
+    ligt:hasMorphs data:ex_27_tier_morphs ;
+    ligt:hasTier data:ex_27_tier_phrase ;
+    ligt:hasWords data:ex_27_tier_words ;
+    ligt:translation "buy"@eng ;
+    rdfs:comment "stem: bili"@eng .
+
+data:ex_27_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "b<um>ili"@tgl ;
+    dcterms:isPartOf data:ex_27_item_word_1 ;
+    ligt:gloss "<ACTFOC>buy"@eng .
+
+data:ex_27_tier_morphs ligt:item data:ex_27_item_morph_1_1 .
+
+data:ex_27_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_27_item_phrase_1 .
+
+data:ex_27_tier_words ligt:item data:ex_27_item_word_1 .
+
+data:ex_28 a ligt:Utterance ;
+    rdfs:label "relinquere"@lat ;
+    dcterms:language glottolog:lati1261 ;
+    ligt:hasMorphs data:ex_28_tier_morphs ;
+    ligt:hasTier data:ex_28_tier_phrase ;
+    ligt:hasWords data:ex_28_tier_words ;
+    ligt:translation "to leave"@eng ;
+    rdfs:comment "stem: reliqu-"@eng .
+
+data:ex_28_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "reli<n>qu"@lat ;
+    dcterms:isPartOf data:ex_28_item_word_1 ;
+    ligt:gloss "leave<PRS>"@eng ;
+    ligt:next data:ex_28_item_morph_1_2 .
+
+data:ex_28_tier_morphs ligt:item data:ex_28_item_morph_1_1,
+        data:ex_28_item_morph_1_2 .
+
+data:ex_28_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_28_item_phrase_1 .
+
+data:ex_28_tier_words ligt:item data:ex_28_item_word_1 .
+
+data:ex_29 a ligt:Utterance ;
+    rdfs:label "yerakrakim"@heb ;
+    dcterms:language glottolog:hebr1245 ;
+    ligt:hasMorphs data:ex_29_tier_morphs ;
+    ligt:hasTier data:ex_29_tier_phrase ;
+    ligt:hasWords data:ex_29_tier_words ;
+    ligt:translation "greenish ones"@eng ;
+    rdfs:comment "ATT = attenuative"@eng .
+
+data:ex_29_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "yerak~rak"@heb ;
+    dcterms:isPartOf data:ex_29_item_word_1 ;
+    ligt:gloss "green~ATT"@eng ;
+    ligt:next data:ex_29_item_morph_1_2 .
+
+data:ex_29_tier_morphs ligt:item data:ex_29_item_morph_1_1,
+        data:ex_29_item_morph_1_2 .
+
+data:ex_29_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_29_item_phrase_1 .
+
+data:ex_29_tier_words ligt:item data:ex_29_item_word_1 .
+
+data:ex_2_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "Gila"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_1 ;
+    ligt:gloss "now"@eng .
+
+data:ex_2_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "abur"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_2 ;
+    ligt:gloss "they"@eng ;
+    ligt:next data:ex_2_item_morph_2_2 .
+
+data:ex_2_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "ferma"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_3 ;
+    ligt:gloss "farm"@eng .
+
+data:ex_2_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "hamišaluǧ"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_4 ;
+    ligt:gloss "forever"@eng .
+
+data:ex_2_item_morph_5_1 a ligt:Morph ;
+    rdfs:label "güǧüna"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_5 ;
+    ligt:gloss "behind"@eng .
+
+data:ex_2_item_morph_6_1 a ligt:Morph ;
+    rdfs:label "amuq’"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_6 ;
+    ligt:gloss "stay"@eng ;
+    ligt:next data:ex_2_item_morph_6_2 .
+
+data:ex_2_tier_morphs ligt:item data:ex_2_item_morph_1_1,
+        data:ex_2_item_morph_2_1,
+        data:ex_2_item_morph_2_2,
+        data:ex_2_item_morph_2_3,
+        data:ex_2_item_morph_3_1,
+        data:ex_2_item_morph_4_1,
+        data:ex_2_item_morph_5_1,
+        data:ex_2_item_morph_6_1,
+        data:ex_2_item_morph_6_2,
+        data:ex_2_item_morph_6_3 .
+
+data:ex_2_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_2_item_phrase_1 .
+
+data:ex_2_tier_words ligt:item data:ex_2_item_word_1,
+        data:ex_2_item_word_2,
+        data:ex_2_item_word_3,
+        data:ex_2_item_word_4,
+        data:ex_2_item_word_5,
+        data:ex_2_item_word_6 .
+
+data:ex_3 a ligt:Utterance ;
+    rdfs:label "palasilu niuirturlu"@kal ;
+    dcterms:language glottolog:kala1399 ;
+    ligt:hasMorphs data:ex_3_tier_morphs ;
+    ligt:hasTier data:ex_3_tier_phrase ;
+    ligt:hasWords data:ex_3_tier_words ;
+    ligt:translation "both the priest and the shopkeeper"@eng .
+
+data:ex_30 a ligt:Utterance ;
+    rdfs:label "bibili"@tgl ;
+    dcterms:language glottolog:taga1270 ;
+    ligt:hasMorphs data:ex_30_tier_morphs ;
+    ligt:hasTier data:ex_30_tier_phrase ;
+    ligt:hasWords data:ex_30_tier_words ;
+    ligt:translation "is buying"@eng .
+
+data:ex_30_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "bi~bili"@tgl ;
+    dcterms:isPartOf data:ex_30_item_word_1 ;
+    ligt:gloss "IPFV~buy"@eng .
+
+data:ex_30_tier_morphs ligt:item data:ex_30_item_morph_1_1 .
+
+data:ex_30_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_30_item_phrase_1 .
+
+data:ex_30_tier_words ligt:item data:ex_30_item_word_1 .
+
+data:ex_31 a ligt:Utterance ;
+    rdfs:label "bumibili"@tgl ;
+    dcterms:language glottolog:taga1270 ;
+    ligt:hasMorphs data:ex_31_tier_morphs ;
+    ligt:hasTier data:ex_31_tier_phrase ;
+    ligt:hasWords data:ex_31_tier_words ;
+    ligt:translation "is buying"@eng ;
+    rdfs:comment "ACTFOC = Actor focus"@eng .
+
+data:ex_31_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "b<um>i~bili"@tgl ;
+    dcterms:isPartOf data:ex_31_item_word_1 ;
+    ligt:gloss "<ACTFOC>IPFV~buy"@eng .
+
+data:ex_31_tier_morphs ligt:item data:ex_31_item_morph_1_1 .
+
+data:ex_31_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_31_item_phrase_1 .
+
+data:ex_31_tier_words ligt:item data:ex_31_item_word_1 .
+
+data:ex_3_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "palasi=lu"@kal ;
+    dcterms:isPartOf data:ex_3_item_word_1 ;
+    ligt:gloss "priest=and"@eng .
+
+data:ex_3_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "niuirtur=lu"@kal ;
+    dcterms:isPartOf data:ex_3_item_word_2 ;
+    ligt:gloss "shopkeeper=and"@eng .
+
+data:ex_3_tier_morphs ligt:item data:ex_3_item_morph_1_1,
+        data:ex_3_item_morph_2_1 .
+
+data:ex_3_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_3_item_phrase_1 .
+
+data:ex_3_tier_words ligt:item data:ex_3_item_word_1,
+        data:ex_3_item_word_2 .
+
+data:ex_5a a ligt:Utterance ;
+    rdfs:label "My s Marko poexali avtobusom v Peredelkino."@rus ;
+    dcterms:language glottolog:russ1263 ;
+    ligt:hasMorphs data:ex_5a_tier_morphs ;
+    ligt:hasTier data:ex_5a_tier_phrase ;
+    ligt:hasWords data:ex_5a_tier_words ;
+    ligt:translation "Marko and I went to Perdelkino by bus."@eng .
+
+data:ex_5a_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "My"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_1 ;
+    ligt:gloss "1PL"@eng .
+
+data:ex_5a_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "s"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_2 ;
+    ligt:gloss "COM"@eng .
+
+data:ex_5a_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "Marko"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_3 ;
+    ligt:gloss "Marko"@eng .
+
+data:ex_5a_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "poexa"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_4 ;
+    ligt:gloss "go"@eng ;
+    ligt:next data:ex_5a_item_morph_4_2 .
+
+data:ex_5a_item_morph_5_1 a ligt:Morph ;
+    rdfs:label "avtobus"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_5 ;
+    ligt:gloss "bus"@eng ;
+    ligt:next data:ex_5a_item_morph_5_2 .
+
+data:ex_5a_item_morph_6_1 a ligt:Morph ;
+    rdfs:label "v"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_6 ;
+    ligt:gloss "ALL"@eng .
+
+data:ex_5a_item_morph_7_1 a ligt:Morph ;
+    rdfs:label "Peredelkino"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_7 ;
+    ligt:gloss "Peredelkino"@eng .
+
+data:ex_5a_tier_morphs ligt:item data:ex_5a_item_morph_1_1,
+        data:ex_5a_item_morph_2_1,
+        data:ex_5a_item_morph_3_1,
+        data:ex_5a_item_morph_4_1,
+        data:ex_5a_item_morph_4_2,
+        data:ex_5a_item_morph_4_3,
+        data:ex_5a_item_morph_5_1,
+        data:ex_5a_item_morph_5_2,
+        data:ex_5a_item_morph_6_1,
+        data:ex_5a_item_morph_7_1 .
+
+data:ex_5a_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_5a_item_phrase_1 .
+
+data:ex_5a_tier_words ligt:item data:ex_5a_item_word_1,
+        data:ex_5a_item_word_2,
+        data:ex_5a_item_word_3,
+        data:ex_5a_item_word_4,
+        data:ex_5a_item_word_5,
+        data:ex_5a_item_word_6,
+        data:ex_5a_item_word_7 .
+
+data:ex_5b a ligt:Utterance ;
+    rdfs:label "My s Marko poexali avtobusom v Peredelkino."@rus ;
+    dcterms:language glottolog:russ1263 ;
+    ligt:hasMorphs data:ex_5b_tier_morphs ;
+    ligt:hasTier data:ex_5b_tier_phrase ;
+    ligt:hasWords data:ex_5b_tier_words ;
+    ligt:translation "Marko and I went to Perdelkino by bus."@eng .
+
+data:ex_5b_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "My"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_1 ;
+    ligt:gloss "we"@eng .
+
+data:ex_5b_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "s"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_2 ;
+    ligt:gloss "with"@eng .
+
+data:ex_5b_item_morph_3_1 a ligt:Morph ;
+    rdfs:label "Marko"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_3 ;
+    ligt:gloss "Marko"@eng .
+
+data:ex_5b_item_morph_4_1 a ligt:Morph ;
+    rdfs:label "poexa"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_4 ;
+    ligt:gloss "go"@eng ;
+    ligt:next data:ex_5b_item_morph_4_2 .
+
+data:ex_5b_item_morph_5_1 a ligt:Morph ;
+    rdfs:label "avtobus"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_5 ;
+    ligt:gloss "bus"@eng ;
+    ligt:next data:ex_5b_item_morph_5_2 .
+
+data:ex_5b_item_morph_6_1 a ligt:Morph ;
+    rdfs:label "v"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_6 ;
+    ligt:gloss "to"@eng .
+
+data:ex_5b_item_morph_7_1 a ligt:Morph ;
+    rdfs:label "Peredelkino"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_7 ;
+    ligt:gloss "Peredelkino"@eng .
+
+data:ex_5b_tier_morphs ligt:item data:ex_5b_item_morph_1_1,
+        data:ex_5b_item_morph_2_1,
+        data:ex_5b_item_morph_3_1,
+        data:ex_5b_item_morph_4_1,
+        data:ex_5b_item_morph_4_2,
+        data:ex_5b_item_morph_4_3,
+        data:ex_5b_item_morph_5_1,
+        data:ex_5b_item_morph_5_2,
+        data:ex_5b_item_morph_6_1,
+        data:ex_5b_item_morph_7_1 .
+
+data:ex_5b_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_5b_item_phrase_1 .
+
+data:ex_5b_tier_words ligt:item data:ex_5b_item_word_1,
+        data:ex_5b_item_word_2,
+        data:ex_5b_item_word_3,
+        data:ex_5b_item_word_4,
+        data:ex_5b_item_word_5,
+        data:ex_5b_item_word_6,
+        data:ex_5b_item_word_7 .
+
+data:ex_6 a ligt:Utterance ;
+    rdfs:label "çıkmak"@tur ;
+    dcterms:language glottolog:nucl1301 ;
+    ligt:hasMorphs data:ex_6_tier_morphs ;
+    ligt:hasTier data:ex_6_tier_phrase ;
+    ligt:hasWords data:ex_6_tier_words ;
+    ligt:translation "to come out"@eng .
+
+data:ex_6_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "çık"@tur ;
+    dcterms:isPartOf data:ex_6_item_word_1 ;
+    ligt:gloss "come.out"@eng ;
+    ligt:next data:ex_6_item_morph_1_2 .
+
+data:ex_6_tier_morphs ligt:item data:ex_6_item_morph_1_1,
+        data:ex_6_item_morph_1_2 .
+
+data:ex_6_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_6_item_phrase_1 .
+
+data:ex_6_tier_words ligt:item data:ex_6_item_word_1 .
+
+data:ex_7 a ligt:Utterance ;
+    rdfs:label "insularum"@lat ;
+    dcterms:language glottolog:lati1261 ;
+    ligt:hasMorphs data:ex_7_tier_morphs ;
+    ligt:hasTier data:ex_7_tier_phrase ;
+    ligt:hasWords data:ex_7_tier_words ;
+    ligt:translation "of the islands"@eng .
+
+data:ex_7_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "insul"@lat ;
+    dcterms:isPartOf data:ex_7_item_word_1 ;
+    ligt:gloss "island"@eng ;
+    ligt:next data:ex_7_item_morph_1_2 .
+
+data:ex_7_tier_morphs ligt:item data:ex_7_item_morph_1_1,
+        data:ex_7_item_morph_1_2 .
+
+data:ex_7_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_7_item_phrase_1 .
+
+data:ex_7_tier_words ligt:item data:ex_7_item_word_1 .
+
+data:ex_8 a ligt:Utterance ;
+    rdfs:label "aux chevaux"@fra ;
+    dcterms:language glottolog:stan1290 ;
+    ligt:hasMorphs data:ex_8_tier_morphs ;
+    ligt:hasTier data:ex_8_tier_phrase ;
+    ligt:hasWords data:ex_8_tier_words ;
+    ligt:translation "to the horses"@eng .
+
+data:ex_8_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "aux"@fra ;
+    dcterms:isPartOf data:ex_8_item_word_1 ;
+    ligt:gloss "to.ART.PL"@eng .
+
+data:ex_8_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "chevaux"@fra ;
+    dcterms:isPartOf data:ex_8_item_word_2 ;
+    ligt:gloss "horse.PL"@eng .
+
+data:ex_8_tier_morphs ligt:item data:ex_8_item_morph_1_1,
+        data:ex_8_item_morph_2_1 .
+
+data:ex_8_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_8_item_phrase_1 .
+
+data:ex_8_tier_words ligt:item data:ex_8_item_word_1,
+        data:ex_8_item_word_2 .
+
+data:ex_9 a ligt:Utterance ;
+    rdfs:label "unsern Vätern"@deu ;
+    dcterms:language glottolog:stan1295 ;
+    ligt:hasMorphs data:ex_9_tier_morphs ;
+    ligt:hasTier data:ex_9_tier_phrase ;
+    ligt:hasWords data:ex_9_tier_words ;
+    ligt:translation "to our fathers"@eng .
+
+data:ex_9_item_morph_1_1 a ligt:Morph ;
+    rdfs:label "unser"@deu ;
+    dcterms:isPartOf data:ex_9_item_word_1 ;
+    ligt:gloss "our"@eng ;
+    ligt:next data:ex_9_item_morph_1_2 .
+
+data:ex_9_item_morph_2_1 a ligt:Morph ;
+    rdfs:label "Väter"@deu ;
+    dcterms:isPartOf data:ex_9_item_word_2 ;
+    ligt:gloss "father.PL"@eng ;
+    ligt:next data:ex_9_item_morph_2_2 .
+
+data:ex_9_tier_morphs ligt:item data:ex_9_item_morph_1_1,
+        data:ex_9_item_morph_1_2,
+        data:ex_9_item_morph_2_1,
+        data:ex_9_item_morph_2_2 .
+
+data:ex_9_tier_phrase a ligt:Tier ;
+    ligt:item data:ex_9_item_phrase_1 .
+
+data:ex_9_tier_words ligt:item data:ex_9_item_word_1,
+        data:ex_9_item_word_2 .
+
+data:examples a ligt:InterlinearCollection ;
+    ligt:subSegment data:ex_1,
+        data:ex_10,
+        data:ex_11,
+        data:ex_12,
+        data:ex_13,
+        data:ex_14,
+        data:ex_15,
+        data:ex_16,
+        data:ex_17,
+        data:ex_18,
+        data:ex_19,
+        data:ex_2,
+        data:ex_20,
+        data:ex_21a,
+        data:ex_21b,
+        data:ex_22a,
+        data:ex_22b,
+        data:ex_23,
+        data:ex_24,
+        data:ex_25,
+        data:ex_26a,
+        data:ex_26b,
+        data:ex_27,
+        data:ex_28,
+        data:ex_29,
+        data:ex_3,
+        data:ex_30,
+        data:ex_31,
+        data:ex_5a,
+        data:ex_5b,
+        data:ex_6,
+        data:ex_7,
+        data:ex_8,
+        data:ex_9 ;
+    rdfs:comment "Leipzig Glossing Rules"@en .
+
+data:ex_10_item_word_1 a ligt:Word ;
+    rdfs:label "n=an"@hit ;
+    dcterms:isPartOf data:ex_10_item_phrase_1 ;
+    ligt:next data:ex_10_item_word_2 .
+
+data:ex_11_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "bi"@djd ;
+    dcterms:isPartOf data:ex_11_item_word_2 ;
+    ligt:gloss "FUT"@eng ;
+    ligt:next data:ex_11_item_morph_2_3 .
+
+data:ex_11_item_morph_2_3 a ligt:Morph ;
+    rdfs:label "yarluga?"@djd ;
+    dcterms:isPartOf data:ex_11_item_word_2 ;
+    ligt:gloss "poke"@eng .
+
+data:ex_11_item_word_1 a ligt:Word ;
+    rdfs:label "nanggayan"@djd ;
+    dcterms:isPartOf data:ex_11_item_phrase_1 ;
+    ligt:next data:ex_11_item_word_2 .
+
+data:ex_12_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "mak"@tur ;
+    dcterms:isPartOf data:ex_12_item_word_1 ;
+    ligt:gloss "INF"@eng .
+
+data:ex_13_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "arum"@lat ;
+    dcterms:isPartOf data:ex_13_item_word_1 ;
+    ligt:gloss "GEN;PL"@eng .
+
+data:ex_14_item_word_1 a ligt:Word ;
+    rdfs:label "aux"@fra ;
+    dcterms:isPartOf data:ex_14_item_phrase_1 ;
+    ligt:next data:ex_14_item_word_2 .
+
+data:ex_15_item_word_1 a ligt:Word ;
+    rdfs:label "n=an"@hit ;
+    dcterms:isPartOf data:ex_15_item_phrase_1 ;
+    ligt:next data:ex_15_item_word_2 .
+
+data:ex_16_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "n"@deu ;
+    dcterms:isPartOf data:ex_16_item_word_1 ;
+    ligt:gloss "DAT.PL"@eng .
+
+data:ex_16_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "n"@deu ;
+    dcterms:isPartOf data:ex_16_item_word_2 ;
+    ligt:gloss "DAT.PL"@eng .
+
+data:ex_17_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "is"@gle ;
+    dcterms:isPartOf data:ex_17_item_word_1 ;
+    ligt:gloss "2SG"@eng .
+
+data:ex_18_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "kòrà"@kin ;
+    dcterms:isPartOf data:ex_18_item_word_1 ;
+    ligt:gloss "work"@eng .
+
+data:ex_19_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "bi"@djd ;
+    dcterms:isPartOf data:ex_19_item_word_2 ;
+    ligt:gloss "FUT"@eng ;
+    ligt:next data:ex_19_item_morph_2_3 .
+
+data:ex_19_item_morph_2_3 a ligt:Morph ;
+    rdfs:label "yarluga?"@djd ;
+    dcterms:isPartOf data:ex_19_item_word_2 ;
+    ligt:gloss "poke"@eng .
+
+data:ex_19_item_word_1 a ligt:Word ;
+    rdfs:label "nanggayan"@djd ;
+    dcterms:isPartOf data:ex_19_item_phrase_1 ;
+    ligt:next data:ex_19_item_word_2 .
+
+data:ex_1_item_word_1 a ligt:Word ;
+    rdfs:label "Mereka"@ind ;
+    dcterms:isPartOf data:ex_1_item_phrase_1 ;
+    ligt:next data:ex_1_item_word_2 .
+
+data:ex_20_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "iamo"@ita ;
+    dcterms:isPartOf data:ex_20_item_word_1 ;
+    ligt:gloss "PRS.1PL"@eng .
+
+data:ex_21a_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "e"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_1 ;
+    ligt:gloss "LOC"@eng .
+
+data:ex_21a_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "khim"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_2 ;
+    ligt:gloss "house"@eng ;
+    ligt:next data:ex_21a_item_morph_2_3 .
+
+data:ex_21a_item_morph_2_3 a ligt:Morph ;
+    rdfs:label "chi"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_2 ;
+    ligt:gloss "PL"@eng .
+
+data:ex_21a_item_morph_3_2 a ligt:Morph ;
+    rdfs:label "yuNNa"@byw ;
+    dcterms:isPartOf data:ex_21a_item_word_3 ;
+    ligt:gloss "be.NPST"@eng .
+
+data:ex_21b_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "e"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_1 ;
+    ligt:gloss "LOC"@eng .
+
+data:ex_21b_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "khim"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_2 ;
+    ligt:gloss "house"@eng ;
+    ligt:next data:ex_21b_item_morph_2_3 .
+
+data:ex_21b_item_morph_2_3 a ligt:Morph ;
+    rdfs:label "chi"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_2 ;
+    ligt:gloss "PL"@eng .
+
+data:ex_21b_item_morph_3_2 a ligt:Morph ;
+    rdfs:label "yuNNa"@byw ;
+    dcterms:isPartOf data:ex_21b_item_word_3 ;
+    ligt:gloss "be.NPST"@eng .
+
+data:ex_22a_item_word_1 a ligt:Word ;
+    rdfs:label "puer"@lat ;
+    dcterms:isPartOf data:ex_22a_item_phrase_1 .
+
+data:ex_22b_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "∅"@lat ;
+    dcterms:isPartOf data:ex_22b_item_word_1 ;
+    ligt:gloss "NOM.SG"@eng .
+
+data:ex_23_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "di"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_1 ;
+    ligt:gloss "OBL"@eng ;
+    ligt:next data:ex_23_item_morph_1_3 .
+
+data:ex_23_item_morph_1_3 a ligt:Morph ;
+    rdfs:label "g"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_1 ;
+    ligt:gloss "AD"@eng .
+
+data:ex_23_item_morph_3_2 a ligt:Morph ;
+    rdfs:label "uq'e"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_3 ;
+    ligt:gloss "bend"@eng ;
+    ligt:next data:ex_23_item_morph_3_3 .
+
+data:ex_23_item_morph_3_3 a ligt:Morph ;
+    rdfs:label "r"@huz ;
+    dcterms:isPartOf data:ex_23_item_word_3 ;
+    ligt:gloss "PRET"@eng .
+
+data:ex_24_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "wíčha"@lkt ;
+    dcterms:isPartOf data:ex_24_item_word_1 ;
+    ligt:gloss "3PL.UND"@eng ;
+    ligt:next data:ex_24_item_morph_1_3 .
+
+data:ex_24_item_morph_1_3 a ligt:Morph ;
+    rdfs:label "wa"@lkt ;
+    dcterms:isPartOf data:ex_24_item_word_1 ;
+    ligt:gloss "1SG.ACT"@eng ;
+    ligt:next data:ex_24_item_morph_1_4 .
+
+data:ex_24_item_morph_1_4 a ligt:Morph ;
+    rdfs:label "xʔu̧"@lkt ;
+    dcterms:isPartOf data:ex_24_item_word_1 ;
+    ligt:gloss "hear"@eng .
+
+data:ex_25_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "wíčha"@lkt ;
+    dcterms:isPartOf data:ex_25_item_word_1 ;
+    ligt:gloss "3PL.UND"@eng ;
+    ligt:next data:ex_25_item_morph_1_3 .
+
+data:ex_25_item_morph_1_3 a ligt:Morph ;
+    rdfs:label "wa"@lkt ;
+    dcterms:isPartOf data:ex_25_item_word_1 ;
+    ligt:gloss "1SG.ACT"@eng ;
+    ligt:next data:ex_25_item_morph_1_4 .
+
+data:ex_25_item_morph_1_4 a ligt:Morph ;
+    rdfs:label "xʔu̧"@lkt ;
+    dcterms:isPartOf data:ex_25_item_word_1 ;
+    ligt:gloss "STEM"@eng .
+
+data:ex_26a_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "seh"@deu ;
+    dcterms:isPartOf data:ex_26a_item_word_1 ;
+    ligt:gloss "see"@eng ;
+    ligt:next data:ex_26a_item_morph_1_3 .
+
+data:ex_26a_item_morph_1_3 a ligt:Morph ;
+    rdfs:label "en"@deu ;
+    dcterms:isPartOf data:ex_26a_item_word_1 ;
+    ligt:gloss "PTCP"@eng .
+
+data:ex_26b_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "seh"@deu ;
+    dcterms:isPartOf data:ex_26b_item_word_1 ;
+    ligt:gloss "see"@eng ;
+    ligt:next data:ex_26b_item_morph_1_3 .
+
+data:ex_26b_item_morph_1_3 a ligt:Morph ;
+    rdfs:label "en"@deu ;
+    dcterms:isPartOf data:ex_26b_item_word_1 ;
+    ligt:gloss "CIRC"@eng .
+
+data:ex_27_item_word_1 a ligt:Word ;
+    rdfs:label "b<um>ili"@tgl ;
+    dcterms:isPartOf data:ex_27_item_phrase_1 .
+
+data:ex_28_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "ere"@lat ;
+    dcterms:isPartOf data:ex_28_item_word_1 ;
+    ligt:gloss "INF"@eng .
+
+data:ex_29_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "im"@heb ;
+    dcterms:isPartOf data:ex_29_item_word_1 ;
+    ligt:gloss "M.PL"@eng .
+
+data:ex_2_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "u"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_2 ;
+    ligt:gloss "OBL"@eng ;
+    ligt:next data:ex_2_item_morph_2_3 .
+
+data:ex_2_item_morph_2_3 a ligt:Morph ;
+    rdfs:label "n"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_2 ;
+    ligt:gloss "GEN"@eng .
+
+data:ex_2_item_morph_6_2 a ligt:Morph ;
+    rdfs:label "da"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_6 ;
+    ligt:gloss "FUT"@eng ;
+    ligt:next data:ex_2_item_morph_6_3 .
+
+data:ex_2_item_morph_6_3 a ligt:Morph ;
+    rdfs:label "č"@lez ;
+    dcterms:isPartOf data:ex_2_item_word_6 ;
+    ligt:gloss "NEG"@eng .
+
+data:ex_2_item_word_1 a ligt:Word ;
+    rdfs:label "Gila"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 ;
+    ligt:next data:ex_2_item_word_2 .
+
+data:ex_30_item_word_1 a ligt:Word ;
+    rdfs:label "bi~bili"@tgl ;
+    dcterms:isPartOf data:ex_30_item_phrase_1 .
+
+data:ex_31_item_word_1 a ligt:Word ;
+    rdfs:label "b<um>i~bili"@tgl ;
+    dcterms:isPartOf data:ex_31_item_phrase_1 .
+
+data:ex_3_item_word_1 a ligt:Word ;
+    rdfs:label "palasi=lu"@kal ;
+    dcterms:isPartOf data:ex_3_item_phrase_1 ;
+    ligt:next data:ex_3_item_word_2 .
+
+data:ex_5a_item_morph_4_2 a ligt:Morph ;
+    rdfs:label "l"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_4 ;
+    ligt:gloss "PST"@eng ;
+    ligt:next data:ex_5a_item_morph_4_3 .
+
+data:ex_5a_item_morph_4_3 a ligt:Morph ;
+    rdfs:label "i"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_4 ;
+    ligt:gloss "PL"@eng .
+
+data:ex_5a_item_morph_5_2 a ligt:Morph ;
+    rdfs:label "om"@rus ;
+    dcterms:isPartOf data:ex_5a_item_word_5 ;
+    ligt:gloss "INS"@eng .
+
+data:ex_5a_item_word_1 a ligt:Word ;
+    rdfs:label "My"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_2 .
+
+data:ex_5b_item_morph_4_2 a ligt:Morph ;
+    rdfs:label "l"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_4 ;
+    ligt:gloss "PST"@eng ;
+    ligt:next data:ex_5b_item_morph_4_3 .
+
+data:ex_5b_item_morph_4_3 a ligt:Morph ;
+    rdfs:label "i"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_4 ;
+    ligt:gloss "PL"@eng .
+
+data:ex_5b_item_morph_5_2 a ligt:Morph ;
+    rdfs:label "om"@rus ;
+    dcterms:isPartOf data:ex_5b_item_word_5 ;
+    ligt:gloss "by"@eng .
+
+data:ex_5b_item_word_1 a ligt:Word ;
+    rdfs:label "My"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_2 .
+
+data:ex_6_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "mak"@tur ;
+    dcterms:isPartOf data:ex_6_item_word_1 ;
+    ligt:gloss "INF"@eng .
+
+data:ex_7_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "arum"@lat ;
+    dcterms:isPartOf data:ex_7_item_word_1 ;
+    ligt:gloss "GEN.PL"@eng .
+
+data:ex_8_item_word_1 a ligt:Word ;
+    rdfs:label "aux"@fra ;
+    dcterms:isPartOf data:ex_8_item_phrase_1 ;
+    ligt:next data:ex_8_item_word_2 .
+
+data:ex_9_item_morph_1_2 a ligt:Morph ;
+    rdfs:label "n"@deu ;
+    dcterms:isPartOf data:ex_9_item_word_1 ;
+    ligt:gloss "DAT.PL"@eng .
+
+data:ex_9_item_morph_2_2 a ligt:Morph ;
+    rdfs:label "n"@deu ;
+    dcterms:isPartOf data:ex_9_item_word_2 ;
+    ligt:gloss "DAT.PL"@eng .
+
+data:ex_10_item_word_2 a ligt:Word ;
+    rdfs:label "apedani"@hit ;
+    dcterms:isPartOf data:ex_10_item_phrase_1 ;
+    ligt:next data:ex_10_item_word_3 .
+
+data:ex_10_item_word_3 a ligt:Word ;
+    rdfs:label "mehuni"@hit ;
+    dcterms:isPartOf data:ex_10_item_phrase_1 ;
+    ligt:next data:ex_10_item_word_4 .
+
+data:ex_10_item_word_4 a ligt:Word ;
+    rdfs:label "essandu"@hit ;
+    dcterms:isPartOf data:ex_10_item_phrase_1 .
+
+data:ex_12_item_word_1 a ligt:Word ;
+    rdfs:label "çık-mak"@tur ;
+    dcterms:isPartOf data:ex_12_item_phrase_1 .
+
+data:ex_13_item_word_1 a ligt:Word ;
+    rdfs:label "insul-arum"@lat ;
+    dcterms:isPartOf data:ex_13_item_phrase_1 .
+
+data:ex_14_item_word_2 a ligt:Word ;
+    rdfs:label "chevaux"@fra ;
+    dcterms:isPartOf data:ex_14_item_phrase_1 .
+
+data:ex_15_item_word_2 a ligt:Word ;
+    rdfs:label "apedani"@hit ;
+    dcterms:isPartOf data:ex_15_item_phrase_1 ;
+    ligt:next data:ex_15_item_word_3 .
+
+data:ex_15_item_word_3 a ligt:Word ;
+    rdfs:label "mehuni"@hit ;
+    dcterms:isPartOf data:ex_15_item_phrase_1 ;
+    ligt:next data:ex_15_item_word_4 .
+
+data:ex_15_item_word_4 a ligt:Word ;
+    rdfs:label "essandu"@hit ;
+    dcterms:isPartOf data:ex_15_item_phrase_1 .
+
+data:ex_16_item_word_1 a ligt:Word ;
+    rdfs:label "unser-n"@deu ;
+    dcterms:isPartOf data:ex_16_item_phrase_1 ;
+    ligt:next data:ex_16_item_word_2 .
+
+data:ex_17_item_word_1 a ligt:Word ;
+    rdfs:label "bhris-is"@gle ;
+    dcterms:isPartOf data:ex_17_item_phrase_1 .
+
+data:ex_18_item_word_1 a ligt:Word ;
+    rdfs:label "mú-kòrà"@kin ;
+    dcterms:isPartOf data:ex_18_item_phrase_1 .
+
+data:ex_1_item_word_2 a ligt:Word ;
+    rdfs:label "di"@ind ;
+    dcterms:isPartOf data:ex_1_item_phrase_1 ;
+    ligt:next data:ex_1_item_word_3 .
+
+data:ex_1_item_word_3 a ligt:Word ;
+    rdfs:label "Jakarta"@ind ;
+    dcterms:isPartOf data:ex_1_item_phrase_1 ;
+    ligt:next data:ex_1_item_word_4 .
+
+data:ex_1_item_word_4 a ligt:Word ;
+    rdfs:label "sekarang"@ind ;
+    dcterms:isPartOf data:ex_1_item_phrase_1 .
+
+data:ex_20_item_word_1 a ligt:Word ;
+    rdfs:label "and-iamo"@ita ;
+    dcterms:isPartOf data:ex_20_item_phrase_1 .
+
+data:ex_21a_item_word_1 a ligt:Word ;
+    rdfs:label "ne-e"@byw ;
+    dcterms:isPartOf data:ex_21a_item_phrase_1 ;
+    ligt:next data:ex_21a_item_word_2 .
+
+data:ex_21b_item_word_1 a ligt:Word ;
+    rdfs:label "ne-e"@byw ;
+    dcterms:isPartOf data:ex_21b_item_phrase_1 ;
+    ligt:next data:ex_21b_item_word_2 .
+
+data:ex_22b_item_word_1 a ligt:Word ;
+    rdfs:label "puer-∅"@lat ;
+    dcterms:isPartOf data:ex_22b_item_phrase_1 .
+
+data:ex_23_item_word_2 a ligt:Word ;
+    rdfs:label "xõxe"@huz ;
+    dcterms:isPartOf data:ex_23_item_phrase_1 ;
+    ligt:next data:ex_23_item_word_3 .
+
+data:ex_28_item_word_1 a ligt:Word ;
+    rdfs:label "reli<n>qu-ere"@lat ;
+    dcterms:isPartOf data:ex_28_item_phrase_1 .
+
+data:ex_29_item_word_1 a ligt:Word ;
+    rdfs:label "yerak~rak-im"@heb ;
+    dcterms:isPartOf data:ex_29_item_phrase_1 .
+
+data:ex_2_item_word_3 a ligt:Word ;
+    rdfs:label "ferma"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 ;
+    ligt:next data:ex_2_item_word_4 .
+
+data:ex_2_item_word_4 a ligt:Word ;
+    rdfs:label "hamišaluǧ"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 ;
+    ligt:next data:ex_2_item_word_5 .
+
+data:ex_2_item_word_5 a ligt:Word ;
+    rdfs:label "güǧüna"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 ;
+    ligt:next data:ex_2_item_word_6 .
+
+data:ex_3_item_word_2 a ligt:Word ;
+    rdfs:label "niuirtur=lu"@kal ;
+    dcterms:isPartOf data:ex_3_item_phrase_1 .
+
+data:ex_5a_item_word_2 a ligt:Word ;
+    rdfs:label "s"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_3 .
+
+data:ex_5a_item_word_3 a ligt:Word ;
+    rdfs:label "Marko"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_4 .
+
+data:ex_5a_item_word_6 a ligt:Word ;
+    rdfs:label "v"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_7 .
+
+data:ex_5a_item_word_7 a ligt:Word ;
+    rdfs:label "Peredelkino"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 .
+
+data:ex_5b_item_word_2 a ligt:Word ;
+    rdfs:label "s"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_3 .
+
+data:ex_5b_item_word_3 a ligt:Word ;
+    rdfs:label "Marko"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_4 .
+
+data:ex_5b_item_word_6 a ligt:Word ;
+    rdfs:label "v"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_7 .
+
+data:ex_5b_item_word_7 a ligt:Word ;
+    rdfs:label "Peredelkino"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 .
+
+data:ex_6_item_word_1 a ligt:Word ;
+    rdfs:label "çık-mak"@tur ;
+    dcterms:isPartOf data:ex_6_item_phrase_1 .
+
+data:ex_7_item_word_1 a ligt:Word ;
+    rdfs:label "insul-arum"@lat ;
+    dcterms:isPartOf data:ex_7_item_phrase_1 .
+
+data:ex_8_item_word_2 a ligt:Word ;
+    rdfs:label "chevaux"@fra ;
+    dcterms:isPartOf data:ex_8_item_phrase_1 .
+
+data:ex_9_item_word_1 a ligt:Word ;
+    rdfs:label "unser-n"@deu ;
+    dcterms:isPartOf data:ex_9_item_phrase_1 ;
+    ligt:next data:ex_9_item_word_2 .
+
+data:ex_16_item_word_2 a ligt:Word ;
+    rdfs:label "Väter-n"@deu ;
+    dcterms:isPartOf data:ex_16_item_phrase_1 .
+
+data:ex_21a_item_word_3 a ligt:Word ;
+    rdfs:label "n-yuNNa"@byw ;
+    dcterms:isPartOf data:ex_21a_item_phrase_1 .
+
+data:ex_21b_item_word_3 a ligt:Word ;
+    rdfs:label "n-yuNNa"@byw ;
+    dcterms:isPartOf data:ex_21b_item_phrase_1 .
+
+data:ex_23_item_word_1 a ligt:Word ;
+    rdfs:label "ož-di-g"@huz ;
+    dcterms:isPartOf data:ex_23_item_phrase_1 ;
+    ligt:next data:ex_23_item_word_2 .
+
+data:ex_26a_item_word_1 a ligt:Word ;
+    rdfs:label "ge-seh-en"@deu ;
+    dcterms:isPartOf data:ex_26a_item_phrase_1 .
+
+data:ex_26b_item_word_1 a ligt:Word ;
+    rdfs:label "ge-seh-en"@deu ;
+    dcterms:isPartOf data:ex_26b_item_phrase_1 .
+
+data:ex_5a_item_word_5 a ligt:Word ;
+    rdfs:label "avtobus-om"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_6 .
+
+data:ex_5b_item_word_5 a ligt:Word ;
+    rdfs:label "avtobus-om"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_6 .
+
+data:ex_9_item_word_2 a ligt:Word ;
+    rdfs:label "Väter-n"@deu ;
+    dcterms:isPartOf data:ex_9_item_phrase_1 .
+
+data:ex_11_item_word_2 a ligt:Word ;
+    rdfs:label "guny-bi-yarluga?"@djd ;
+    dcterms:isPartOf data:ex_11_item_phrase_1 .
+
+data:ex_19_item_word_2 a ligt:Word ;
+    rdfs:label "guny-bi-yarluga?"@djd ;
+    dcterms:isPartOf data:ex_19_item_phrase_1 .
+
+data:ex_21a_item_word_2 a ligt:Word ;
+    rdfs:label "a-khim-chi"@byw ;
+    dcterms:isPartOf data:ex_21a_item_phrase_1 ;
+    ligt:next data:ex_21a_item_word_3 .
+
+data:ex_21b_item_word_2 a ligt:Word ;
+    rdfs:label "a-khim-chi"@byw ;
+    dcterms:isPartOf data:ex_21b_item_phrase_1 ;
+    ligt:next data:ex_21b_item_word_3 .
+
+data:ex_23_item_word_3 a ligt:Word ;
+    rdfs:label "m-uq'e-r"@huz ;
+    dcterms:isPartOf data:ex_23_item_phrase_1 .
+
+data:ex_24_item_word_1 a ligt:Word ;
+    rdfs:label "na-wíčha-wa-xʔu̧"@lkt ;
+    dcterms:isPartOf data:ex_24_item_phrase_1 .
+
+data:ex_25_item_word_1 a ligt:Word ;
+    rdfs:label "na-wíčha-wa-xʔu̧"@lkt ;
+    dcterms:isPartOf data:ex_25_item_phrase_1 .
+
+data:ex_2_item_word_2 a ligt:Word ;
+    rdfs:label "abur-u-n"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 ;
+    ligt:next data:ex_2_item_word_3 .
+
+data:ex_2_item_word_6 a ligt:Word ;
+    rdfs:label "amuq’-da-č"@lez ;
+    dcterms:isPartOf data:ex_2_item_phrase_1 .
+
+data:ex_5a_item_word_4 a ligt:Word ;
+    rdfs:label "poexa-l-i"@rus ;
+    dcterms:isPartOf data:ex_5a_item_phrase_1 ;
+    ligt:next data:ex_5a_item_word_5 .
+
+data:ex_5b_item_word_4 a ligt:Word ;
+    rdfs:label "poexa-l-i"@rus ;
+    dcterms:isPartOf data:ex_5b_item_phrase_1 ;
+    ligt:next data:ex_5b_item_word_5 .
+

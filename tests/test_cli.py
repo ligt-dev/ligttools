@@ -6,7 +6,7 @@ import tempfile
 from unittest import mock
 
 import pytest
-from ligttools.cli import create_parser, main
+from ligttools.convert import create_parser, main
 
 
 class TestCli:
